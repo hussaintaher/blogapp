@@ -6,12 +6,10 @@ import BlogCard from '../components/BlogCard'
 import { getSession, SessionProvider } from "next-auth/react"
 
 export default function Home({blogs}) {
-  const session = getSession()
-  console.log(session)
-  
+  const session = getSession()  
   return (
     <div className={'h-full p-5'}>
-        <center className='w-[70%] mx-auto border'>
+        <center className='w-[70%] mx-auto'>
           {blogs.map((item) => {
             return (
               <Link key={item.id} href={`/blogs/${item.id}`}>

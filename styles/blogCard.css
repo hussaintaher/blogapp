@@ -1,0 +1,34 @@
+.offerBox {
+    position: absolute;
+    padding: 5px 10px;
+    left: 0;
+    top: 0;
+}
+
+.card {
+    overflow: hidden;
+    direction: rtl;
+    padding: 15px;
+}
+
+.cardFooter {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cardFooter button {
+    background-color: #1c598F;
+    border: 2px solid #1c598F;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    display: block;
+    font-weight: 500;
+    padding: 6px;
+    width: 100%;
+    border-radius: 0.25rem;
+}
+
+.cardFooter h1 {
+    font-size: 13px;
+}

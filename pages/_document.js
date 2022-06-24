@@ -6,7 +6,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en" className="scroll-smooth h-full">
             <Head />
-        <body className="border text-black antialiased dark:bg-gray-900 dark:text-white">
+        <body className="text-black antialiased dark:bg-gray-900 dark:text-white">
             <Main />
             <NextScript />
         </body>
