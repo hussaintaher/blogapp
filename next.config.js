@@ -7,6 +7,9 @@ const nextConfig = {
     APP_URL: process.env.APP_URL,
   },
   reactStrictMode: true,
+  compiler: {
+    styledComponents: true,
+  },
 }
 
 module.exports = nextConfig

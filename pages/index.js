@@ -30,10 +30,9 @@ export default function Home({blogs}) {
 export async function getServerSideProps(context) {
   const res = await fetch(`${process.env.API_URL}/api/blogs?populate=*`)
   const blogs = await res.json()
-  console.log(blogs.data)
   return {
     props: {
-      blogs: blogs.data
+      blogs: blogs.data,
     }, // will be passed to the page component as props
   }
 }

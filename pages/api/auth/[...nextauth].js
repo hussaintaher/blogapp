@@ -41,27 +41,19 @@ export default NextAuth({
     }),
   ],
   callbacks: {
-    async jwt({ token, user }) {
-      // first time jwt callback is run, user object is available
-      if (user) {
-        token.id = user.id;
-      }
-      console.log('token: ', user)
-      return token;
+    jwt: async ({ token, user }) => {
+      user && (token.user = user)
+      // console.log('user inside jwt: ', user)
+      // console.log('token inside jwt: ', token)
+      return token
     },
-
-    //You can use the session callback to customize the session object returned to 
-    //the client if you need to return additional data in the session object.
-    async session({ session, token }) {
-      // token contains user's data returned from authorize method
-      console.log('inside session: ', token)
-      if (token) {
-        // you can add new properities to session
-        session.user.photo = token.provider;
-      }
-      console.log('session: ', session)
-      return session;
-    },
+    session: async ({ session, token }) => {
+        // console.log('token inside jwt: ', token)
+        // console.log('session inside jwt: ', session)
+        session.user = token.user
+        // session.user.jj = 'hussain' // To assign new attributes
+        return session
+    }
   },
   secret: "test",
   jwt: {
