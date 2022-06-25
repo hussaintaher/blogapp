@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+  Colors: 
+    RGB(33, 36, 40) #212428
+    #212428
+    #878e99
+    linear-gradient(to right bottom, #212428, #16181c);
+*/
 html,
 body {
   padding: 0;
@@ -17,4 +24,11 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.section_bg {
+  background-color: #212428;
+}
+.section_wrapper {
+  background: linear-gradient(145deg, #1e2024, #23272b);
 }

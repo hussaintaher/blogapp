@@ -7,7 +7,7 @@ function Navbar() {
   
   console.log(session)
   return (
-    <nav className='header px-60 mb-10'>
+    <nav className='header px-60'>
       <h1 className='logo'>
         <a href='#'>Instrumentation Blog</a>
       </h1>
@@ -18,18 +18,8 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link href='/info'>
-            <a>INFO</a>
-          </Link>
-        </li>
-        <li>
-          <Link href='/dashboard'>
-            <a>Dashboard</a>
-          </Link>
-        </li>
-        <li>
-          <Link href='/blog'>
-            <a>Blog</a>
+          <Link href='/blogs'>
+            <a>Blogs</a>
           </Link>
         </li>
         {!status.loading && !session && (
